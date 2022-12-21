@@ -15,13 +15,9 @@ public class ExceptionChallenge {
      * for a thrown exception!
      *
      * Check out this guide on throwing exceptions: https://rollbar.com/guides/java/how-to-throw-exceptions-in-java/#
+     * @throws Exception
      */
-    public void mustThrow(){
-        try{
-
-        } catch (Exception){
-
-            throw new Exception("something");
-        }
+    public void mustThrow() throws Exception{
+        throw new Exception();
     }
 }
