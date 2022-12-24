@@ -50,7 +50,7 @@ import java.sql.Statement;
  *
  */
 public class CreateATable {
-
+    
     /**
      * Assignment: Create a new table in the problem1.sql file, called "song" with 2 columns "title" and "artist".
      * both columns should have the datatype varchar(100), which represents a String of up to 100 characters.
@@ -64,7 +64,6 @@ public class CreateATable {
      */
     public void problem1(){
         String sql = FileUtil.parseSQLFile("problem1.sql");
-
         try {
             Connection connection = ConnectionUtil.getConnection();
             Statement s = connection.createStatement();
@@ -73,5 +72,5 @@ public class CreateATable {
             System.out.println("problem1: " + e.getMessage() + '\n');
         }
     }
-
+    
 }
