@@ -1,6 +1,7 @@
 package com.revature;
 
 import io.javalin.Javalin;
+import io.javalin.http.HandlerType;
 
 public class JavalinSingleton {
 
@@ -12,10 +13,11 @@ public class JavalinSingleton {
      * Note: Please refer to the "CreatingEndpoints.MD" file for more assistance if needed.
      */
     public static Javalin getInstance(){
-        Javalin app = Javalin.create();
-        
+        Javalin app = Javalin.create().start(9000);
         //write endpoint here
-
+        app.get("/hello/", ctx -> {
+            ctx.result("Hello World");
+        });
         return app;
     }
     
