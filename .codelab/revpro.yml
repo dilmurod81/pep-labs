@@ -659,6 +659,7 @@
     :count_tests_passed: 0
     :tests:
       shouldAnswerWithTrue: 0
+      problem1Test: 0
   StatusCodes:
     :Week: 5
     :Order: 7
