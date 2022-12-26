@@ -1,1 +1,1 @@
-CREATE TABLE POST (id INT NOT NULL PRIMARY KEY, post varchar(255), user_fk INT NOT NULL, FOREIGN KEY (user_fk) REFERENCES user(id));
+CREATE TABLE post (id INT PRIMARY KEY, post varchar(255), user_fk INT REFERENCES user(id));
