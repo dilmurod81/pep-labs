@@ -51,10 +51,10 @@ public class BookService {
      * key was already in use.)
      */
     public Book addBook(Book book) {
-        if(bookDAO.getBookByIsbn(0) != null){
-            return book;
-        }
-        return null;
+        
+            return null;
+            
+       
     }
     /**
      * TODO: Use the bookDAO to retrieve a list of all books that have a bookCount above 0.
