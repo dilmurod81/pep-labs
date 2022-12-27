@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class StringReverse {
     /**
@@ -13,6 +14,11 @@ public class StringReverse {
      * @return the reverse of str.
      */
     public String reverse(String str){
-        return null;
+        String reverse = "";
+        for (int i = 0; i < str.length(); i++){
+            char ch = str.charAt(i);
+            reverse = ch + reverse;
+        }
+        return reverse;
     }
 }
