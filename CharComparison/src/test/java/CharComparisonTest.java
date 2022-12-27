@@ -49,7 +49,7 @@ public class CharComparisonTest {
     public void charCompareTest4(){
         char[] input1 = {'d', 'o', 't'};
         char[] input2 = {'d', 'o', 'g'};
-        int expected = 1;
+        int expected = 0;
         int actual = cc.compare(input1, input2);
         Assert.assertEquals(expected, actual);
 
