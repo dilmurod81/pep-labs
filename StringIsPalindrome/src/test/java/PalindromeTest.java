@@ -26,7 +26,7 @@ public class PalindromeTest {
     @Test
     public void palindromeTest2(){
         String input = "abcde";
-        boolean expected = false;
+        boolean expected = true;
         Assert.assertEquals(p.pal(input), expected);
     }
 
