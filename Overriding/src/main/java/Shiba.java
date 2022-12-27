@@ -18,5 +18,7 @@
 public class Shiba extends Dog{
 
 //    override sound() here
-
+    public String sound(){
+        return "I can speak human";
+        }
 }
