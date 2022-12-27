@@ -11,7 +11,7 @@ public class IsThereSum {
      */
     public boolean check(int[] arr, int target){
         for (int i = 0; i < arr.length; i++){
-            for (int j = 0; j < arr.length; i++){
+            for (int j = 0; j < arr.length-1; j++){
                 if(arr[i] + arr[j] == target){
                     return true;
                 }
