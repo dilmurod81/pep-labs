@@ -10,6 +10,20 @@ public class LargestSum {
      * @return the largest possible sum of separate numbers from nums.
      */
     public int bigSum(List<Integer> nums){
-        return 0;
+        int max = 0;
+		int secondMax = 0;
+        
+        for (int value : nums) {
+            if (value > max) {
+				secondMax = max;
+				max = value;
+			} else if (value >= secondMax && value <= max) {
+				secondMax = value;
+			}
+		}
+		 
+		int sum = max + secondMax;
+ 
+		return sum;
     }
 }
