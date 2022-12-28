@@ -1,6 +1,10 @@
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 public class WordCountMap {
     /**
      * Receive a string of multiple words.
@@ -15,7 +19,23 @@ public class WordCountMap {
      * @return a Map (key/value pairs) of all the words mapped to their number of occurrences.
      */
     public Map<String, Integer> returnWordMap(String words){
-
-        return null;
+        Map<String, Integer> hashMap = new HashMap<>();
+ 
+        String[] splittedWords = words.split(" ");
+ 
+        for (String w : splittedWords) {
+ 
+            Integer integer = hashMap.get(w);
+ 
+            if (integer == null)
+                
+                hashMap.put(w, 1);
+ 
+            else {
+                
+                hashMap.put(w, integer + 1);
+            }
+        }
+        return hashMap;
     }
 }
