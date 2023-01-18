@@ -53,7 +53,7 @@ public class BookService {
     public Book addBook(Book book) {
         if(bookDAO.getBookByIsbn(book.getIsbn()) != null){
             bookDAO.insertBook(book);
-            return book;
+            return bookDAO.getBookByIsbn(0);
         }
             return null;
     }
