@@ -3,6 +3,7 @@ package Application.Service;
 import Application.DAO.BookDAO;
 import Application.Model.Book;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -50,12 +51,13 @@ public class BookService {
      * @return book if it was successfully persisted, null if it was not successfully persisted (eg if the book primary
      * key was already in use.)
      */
-    public Book addBook(Book book) {
-        if(book.getIsbn() != book.getIsbn()){
+    public Book addBook(Book book) {        
+        if(bookDAO.getBookByIsbn(book.getIsbn()) == null){
             bookDAO.insertBook(book);
             return book;
-        }
+        }else{
             return null;
+        }
     }
     /**
      * TODO: Use the bookDAO to retrieve a list of all books that have a bookCount above 0.
