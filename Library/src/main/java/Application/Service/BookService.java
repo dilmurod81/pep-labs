@@ -3,6 +3,7 @@ package Application.Service;
 import Application.DAO.BookDAO;
 import Application.Model.Book;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -51,7 +52,14 @@ public class BookService {
      * key was already in use.)
      */
     public Book addBook(Book book) {
-        if(book.getIsbn() != book.getIsbn()){
+        List<Book> allBooks = getAllAvailableBooks();
+        int i = 0;
+        for (Book b : allBooks){  
+            if(b.getIsbn() == book.getIsbn()){
+                i = 1;
+            }
+        }
+        if(i == 1){
             bookDAO.insertBook(book);
             return book;
         }
